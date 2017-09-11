@@ -1,0 +1,13 @@
+---
+- hosts: server #EC2 public IP to be picked from hosts file
+  tasks:
+      - name: uninstall apache packages | use apt module state as absent purge as yes to force purge all config files
+        apt: >
+          pkg={{ item }} 
+          state=absent
+          purge=yes
+          force=yes
+          autoremove=yes
+        with_items:
+          - apache2* #packages to be deleted
+        sudo: yes
