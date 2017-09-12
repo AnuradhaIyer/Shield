@@ -1,5 +1,5 @@
 ---
-- hosts: server #EC2 public IP to be picked from hosts file
+- hosts: apache #EC2 public IP to be picked from hosts file
   tasks:
       - name: uninstall apache packages | use apt module state as absent purge as yes to force purge all config files
         apt: >
