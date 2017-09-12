@@ -1,0 +1,13 @@
+---
+- hosts: server #EC2 public IP to be picked from hosts file
+  sudo:  yes
+  tasks:
+  #Task to install apache2 with latest version
+      - name: install apache2
+        apt:  name=apache2 update_cache=yes state=latest
+
+  #Task to replace the original index.html page with 'Hello World' index.html page      
+      - name: replace default index.html file
+        copy: src=/home/ashwini/index.html dest=/var/www/html/index.html
+
+
