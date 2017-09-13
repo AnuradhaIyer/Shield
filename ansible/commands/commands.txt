@@ -1,1 +1,21 @@
-Commands for Ansible assignment.
+Commands used for Ansible Assignment.
+
+1. Install Ansible
+   apt-get install ansible
+
+2. Verify Ansible installed and check its version:
+   ansible —version3. SSH Key Generation
+   ssh-keygen
+
+4. Connect to EC2 instance using EC2 key
+   ssh -i /Users/user/.ssh/EC2KeyPairs.pem ubuntu@ip_address_EC2_instance
+
+5. Connect to EC2 instance after adding public key generated above in the authorized keys    of EC2 server.
+   ssh Ubuntu@ip_address_EC2_instance6. Check server connection through ansible.
+   ansible -m ping host_group_name
+
+7. Run ansible playbook to deploy webserver and display webpage.
+   ansible –playbook  apache.yml –ask-sudo-pass
+
+8. Run ansible playbook to undeploy resources.
+   ansible -playbook apache_uninstall.yml
