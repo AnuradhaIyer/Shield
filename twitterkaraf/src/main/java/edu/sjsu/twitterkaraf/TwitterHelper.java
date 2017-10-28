@@ -200,6 +200,12 @@ public class TwitterHelper {
 		}
 		return twitterResponseList;
 	}
+	
+	/**
+	 * Implementing Twitter API to get the location from where twitter has trending topics*
+	 * @return Returns the locations that Twitter has trending topic information for.
+	 * @author Anuradha Rajashekar
+	 */
 
 	public List<String> trendsAvailable() {
 		List<String> twitterResponseList = new ArrayList<String>();
@@ -283,6 +289,11 @@ public class TwitterHelper {
 		return twitterResponseList;
 
 	}
+	/**
+	 * Implementing Twitter API to get the location nearest to user from where twitter has trending topics*
+	 * @return Returns the locations that Twitter has trending topic information for, closest to a specified location.
+	 * @author Anuradha Rajashekar
+	 */
 
 	public List<String> trendsClosest() {
 		List<String> twitterResponseList = new ArrayList<String>();
@@ -305,6 +316,14 @@ public class TwitterHelper {
 		}
 		return twitterResponseList;
 	}
+	
+	/**
+	 * Implementing Twitter API to get the list of followers for the user.
+	 * 
+	 * @param seachstring
+	 * @return Returns a cursored collection of user objects for users following the specified user.
+	 * @author Anuradha Rajashekar
+	 */
 
 	public List<String> followersList(String searchStr) {
 		List<String> twitterResponseList = new ArrayList<String>();
